@@ -1,12 +1,17 @@
 import React from "react";
 
 class SearchBar extends React.Component {
+
+  /* term is defaulted to empty string */
   state = { term: "" };
 
   onFormSubmit(event) {
+    /** If will keep the browser from submitting the form automatically. 
+        By default, the browser submits the form when we hit "enter"/"return" key.
+    */
     event.preventDefault();
 
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
   }
 
   render() {
