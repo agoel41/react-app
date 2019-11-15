@@ -17,6 +17,7 @@ Unsplash API docs: https://unsplash.com/documentation#search-photos
   - Rendering list of components
   - Purpose of keys in Lists
   - Implementing Keys in Lists
+- Using Ref's for DOM access.
 
 **React app user interface**
 
