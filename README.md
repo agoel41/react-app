@@ -10,7 +10,7 @@ Unsplash API docs: https://unsplash.com/documentation#search-photos
 **Concepts used**
 
 - Handling user inputs with forms and elments
-- Making API requests with React
+- Making API requests with React and Axios
 - Building list of records
   - Rendering lists
   - Map statements
