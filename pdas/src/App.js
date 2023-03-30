@@ -1,14 +1,18 @@
 // import default export.
-import ProfileCard from './ProfileCard'
+import ProfileCard from './ProfileCard';
+import AlexaImage from './images/alexa.png';
+import CortanaImage from './images/cortana.png';
+import SiriImage from './images/siri.png';
 
 function App() {
 
     return (
         <div>
             <div>Personal Digital Assistants</div>
-            <ProfileCard title='Alexa' handle='@alexa99' />
-            <ProfileCard title='Cortona' handle='@cortona32' />
-            <ProfileCard title='Siri' handle='@siri01' />
+
+            <ProfileCard title='Alexa' handle='@alexa99' image={AlexaImage} />
+            <ProfileCard title='Cortana' handle='@cortona32' image={CortanaImage} />
+            <ProfileCard title='Siri' handle='@siri01' image={SiriImage} />
         </div>
     );
 }

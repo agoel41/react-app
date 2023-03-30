@@ -1,6 +1,6 @@
 
 //function ProfileCard(props) {
-function ProfileCard({title, handle}) {
+function ProfileCard({title, handle, image}) {
 
     // const title = props.title;
     // const handle = props.handle;
@@ -10,9 +10,10 @@ function ProfileCard({title, handle}) {
     // const { title, handle } = props;
 
     return (
-        <div>
-            <div> Title is {title} </div>
-            <div> Handle is {handle} </div>
+        <div className='card'>
+            <img src={image} alt='pda logo' className='card-image' />
+            <div className='card-content'> Title is {title} </div>
+            <div className='card-content'> Handle is {handle} </div>
         </div>
     );
 }
