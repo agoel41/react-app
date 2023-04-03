@@ -1,41 +1,33 @@
-import React from "react";
+import './SearchBar.css';
+import {useState} from 'react';
 
-class SearchBar extends React.Component {
+function SearchBar({ onSubmit }) {
 
-  /* term is defaulted to empty string */
-  state = { term: "" };
+  // 1. Create a new piece of state
+  const [term, setTerm] = useState('');
 
-  onFormSubmit(event) {
-    /** If will keep the browser from submitting the form automatically. 
-        By default, the browser submits the form when we hit "enter"/"return" key.
-    */
+  const handleFormSubmit = (event) => {
+    // disable default form submission event.
     event.preventDefault();
+    onSubmit(term);
+  };
 
-    this.props.onSubmit(this.state.term);
-  }
+  // 4. update the state
+  const handleChange = (event) => {
+    //console.log(event.target.value);
+    setTerm(event.target.value);
+  };
 
-  render() {
-    return (
-      <div className="ui segment">
-        <form onSubmit={event => this.onFormSubmit(event)} className="ui form">
-          <div className="field">
-            <label>Image Search</label>
-            {/* 
-                Note: this.onInputChange does not have parentheses. We don't put
-                parentheses for any callback function passed to any event handler such as onChange.
-                this.onInputChange - called when the onChange event is triggered.
-                this.onInputChange() - called everytime the component is rendered.
-            */}
-            <input
-              type="text"
-              value={this.state.term}
-              onChange={event => this.setState({ term: event.target.value })}
-            />
-          </div>
-        </form>
-      </div>
-    );
-  }
+  // 2. Create an event handler to watch for the onChange event.
+  return (
+    <div className='search-bar'>
+      <form onSubmit={handleFormSubmit} className='form'>
+        <label>Enter Search Term</label>
+        <input value={term} onChange={handleChange} />
+      </form>
+    </div>
+  );
 }
+
 
 export default SearchBar;
