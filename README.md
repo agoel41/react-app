@@ -24,3 +24,10 @@ Unsplash API docs: https://unsplash.com/documentation#search-photos
 The customer enters a search term and the "Pics" React app makes an API call to unsplash and display images on the page.
 
 ![Accuracy](https://github.com/agoel41/react-app/blob/master/pics/public/Pics%20react%20app.png)
+
+
+
+### React Projects
+
+1. 
+6. **Books** - Demonstrate handling of forms.
