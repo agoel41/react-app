@@ -22,6 +22,18 @@ function App() {
         setBooks(updatedBooks);
     };
 
+    const updateBookById = (id, newTitle) => {
+        const updatedBooks = books.map((book) => {
+            if (book.id === id) 
+                return { ...book, title: newTitle };
+                
+            return book;
+
+        });
+
+        setBooks(updatedBooks);
+    };
+
     // onCreate is the event/prop and createBook is event handler.
     return (
         <div>
